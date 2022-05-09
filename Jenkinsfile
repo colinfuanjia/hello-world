@@ -19,12 +19,11 @@ pipeline{
 	     }
 	   }
 	   stage("Upload"){
-             steps{
-	       withAWS(region:"${region}", credentials:"${aws_credential}){
-                s3Upload(file:"${TAG_NAME}", bucket:"${bucket}", path:"${TAG_NAME}/")
-                }    
-             }
+             steps {
+               withCredentials(credentialsId: 'S3Credentials', accessKeyVariable: 'AKIAQHO2RT6EJCZHZTHN', secretKeyVariable: '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')
+            }
           }
-       }
+        }
+      
    
 
