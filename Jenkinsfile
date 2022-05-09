@@ -23,7 +23,8 @@ pipeline{
                withCredentials(credentialsId: 'S3Credentials', accessKeyVariable: 'AKIAQHO2RT6EJCZHZTHN', secretKeyVariable: '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')
             }
           }
-        }
+       }	
+}
       
    
 
